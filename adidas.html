@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adidas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <title>Addidas</title>
+</head>
+<body>
+    <div class="main">
+        <div id="shoess">
+            <div class="nav">
+                <div class="logo">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+                <div class="links">
+                    <a href="ecommerce.html">HOME</a>
+                    <a href="#shoes">SHOES</a>
+                    <a href="#pants">PANTS</a>
+                    <a href="#flip-flop">FLIP-FLOPS</a>
+                    <a href="#bags">BAGS</a>
+                </div>
+                <div class="logo2">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+            </div>
+            <div class="header">
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enIN/Images/in-fw23-cricket-worldcup-launch-mh-d_tcm209-1067261.png" alt="">
+            </div>
+            <h1>OUR PRODUCTS</h1>
+            <div class="container">
+                <div class="card" data-name="p1">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4896bd57f0894845b5c0ae8300eec549_9366/Grand_Court_Cloudfoam_Comfort_Shoes_White_GW9195_01_standard.jpg" alt="">
+                    <p>Grand Court Cloudfoam Comfort Shoes</p>
+                    <p>₹4 799.00</p>
+                </div>
+                <div class="card" data-name="p2">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/da3096053475429a9943af2e00931c26_9366/Breaknet_2.0_Shoes_White_HP9424_01_standard.jpg" alt="">
+                    <p>Breaknet 2.0 Shoes</p>
+                    <p>₹5 999.00</p>
+                </div>
+                <div class="card" data-name="p3">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/5676f3c37e21445985825d0cfeee7c93_9366/STREET_ICON_SHOES_White_IQ9857_01_standard.jpg" alt="">
+                    <p>STREET ICON SHOES</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p4">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c4525189215146db81368cf216bcf534_9366/STREET_ICON_SHOES_Turquoise_IQ9856_01_standard.jpg" alt="">
+                    <p>STREET ICON SHOES</p>
+                    <p>₹3 799.00</p>
+                </div>
+                <div class="card" data-name="p5">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/68ae7ea7849b43eca70aac1e00f5146d_9366/Stan_Smith_Shoes_White_FX5502_01_standard.jpg"                <p>Breaknet 2.0 Shoes</p>
+                    <p>Stan Smith Shoes</p>
+                    <p>₹8 999.00</p>
+                </div>
+                <div class="card" data-name="p6">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/26280fc629514fdfa3867918030e377e_9366/CourtBeat_Court_Lifestyle_Shoes_Black_ID9660_01_standard.jpg" alt="">
+                    <p>CourtBeat Court Lifestyle Shoes</p>
+                    <p>₹6 999.00</p>
+                </div>
+                <div class="card" data-name="p7">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/09c5ea6df1bd4be6baaaac5e003e7047_9366/Forum_Low_Shoes_White_FY7756_01_standard.jpg" alt="">
+                    <p>Forum Low Shoes</p>
+                    <p>₹9 999.00</p>
+                </div>
+            </div>
+            <h1>NEW ARRIVALS</h1>
+            <div class="container">
+                <div class="card" data-name="p8">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7c3bd0f9e2e5463780d367c6c0be6560_9366/stan-smith-crepe-shoes.jpg" alt="">
+                    <p>Men originals Brown Stan Smith Crepe Shoes</p>
+                    <p>₹13 799.00</p>
+                </div>
+                <div class="card" data-name="p9">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/8a62aacd63ad48f6a1433f6fb319cc56_9366/forum-bold-shoes.jpg" alt="">
+                    <p>Women Basketball White Forum Bold Shoes</p>
+                    <p>₹10 999.00</p>
+                </div>
+                <div class="card" data-name="p10">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f4484e30da084d8a868cafd2016193a4_9366/orchard-x-new-england-revolution-samba-adv-shoes.jpg" alt="">
+                    <p>Men originals Blue Orchard x New England Revolution Samba ADV Shoes</p>
+                    <p>₹10 799.00</p>
+                </div>
+                <div class="card" data-name="p11">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/454739b665514cc08c2438842fd9c373_9366/nmd_g1-shoes.jpg" alt="">
+                    <p>Men originals Brown NMD_G1 Shoes</p>
+                    <p>₹15 999.00</p>
+                </div>
+                <div class="card" data-name="p12">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fe6e39055d4c440db883f30055a536a7_9366/nmd_s1-shoes.jpg" alt="">
+                    <p>Men originals Black NMD_S1 Shoes</p>
+                    <p>₹19 799.00</p>
+                </div>
+                <div class="card" data-name="p13">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/854d6d1edbf94db1aa91d7ee5fee9216_9366/busenitz-vulc-2.0-shoes.jpg" alt="">
+                    <p>Men originals Black Busenitz Vulc 2.0 Shoes</p>
+                    <p>₹4 799.00</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="pants">
+            <h1>PANTS</h1>
+            <div class="container">
+            <div class="card" data-name="p14">
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0b106be0fa784731b291a494794744fe_9366/adicolor-classics-sst-track-pants.jpg" alt="">
+                <p>Adicolor Classics SST Track Pants</p>
+                <p>₹6 799.00</p>
+            </div>
+            <div class="card" data-name="p15">
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/59ec599e62eb4bf1abb6afc30097eca0_9366/adicolor-classics-sst-track-pants.jpg" alt="">
+                <p>ADICOLOR CLASSICS SST TRACK PANTS</p>
+                <p>₹6 799.00</p>
+            </div>
+            <div class="card" data-name="p16">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/883ba696de464774ac6daef5010d03f7_9366/adicolor-classics-3-stripes-cargo-pants.jpg" alt="">
+                <p>Adicolor Classics 3-Stripes Cargo Pants</p>
+                <p>₹8 799.00</p>
+            </div>
+            <div class="card" data-name="p17">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/70b17658f1be473299ecafd000d0f03e_9366/adicolor-classics-3-stripes-cargo-pants.jpg" alt="">
+                <p>Adicolor Classics 3-Stripes Cargo Pants</p>
+                <p>₹8 799.00</p>
+            </div>
+            <div class="card" data-name="p18">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/cd17438d3a814bfd91feae8001296259_9366/essentials-fleece-regular-tapered-pants.jpg" alt="">
+                <p>Essentials Fleece Regular Tapered Pants</p>
+                <p>₹3 999.00</p>
+            </div>
+            <div class="card" data-name="p19">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/3339a75b5b604225b1e7afc901311e31_9366/graphics-monogram-sst-track-pants.jpg" alt="">
+                <p>Graphics Monogram SST Track Pants</p>
+                <p>₹7 799.00</p>
+            </div>
+            <div class="card" data-name="p20">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/92542c774ba547b9a74a809c054f0968_9366/z.n.e.-premium-pants.jpg" alt="">
+                <p>Graphics Monogram SST Track Pants</p>
+                <p>₹8 799.00</p>
+            </div>
+            <div class="card" data-name="p21">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/696c63304a0a4fa8abbcaf5e00ece4a1_9366/adicolor-parley-track-pants.jpg" alt="">
+                <p>Adicolor Parley Track Pants</p>
+                <p>₹4 799.00</p>
+            </div>
+            <div class="card" data-name="p22"> 
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/d03570d3c69248dba303af2000ba56d9_9366/future-icons-3-stripes-pants.jpg" alt="">
+                <p>FUTURE ICONS 3-STRIPES PANTS</p>
+                <p>₹6 799.00</p>
+            </div>
+            <div class="card" data-name="p23">
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/16d49add1437482d8d62af25011ffbbb_9366/trefoil-essentials-pants.jpg" alt="">
+                <p>Trefoil Essentials Pants</p>
+                <p>₹5 999.00</p>
+            </div>
+        </div>
+        </div>
+        <div id="flip-flop">
+            <h1>MEN'S SLIDERS & FLIP-FLOPS </h1>
+            <div class="container">
+                <div class="card" data-name="p24">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/07f04e4aa56a4c3792f7a59f009eab3d_9366/adilette-slides.jpg" alt="">
+                    <p>ADILETTE SLIDES</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p25">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/28bb078a551544a191dea59900e3f310_9366/adilette-slides.jpg" alt="">
+                    <p>ADILETTE SLIDES</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p26">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/cfac3ca3f2984ceb8b9ed815e1f993cd_9366/adilette-22-slides.jpg" alt="">
+                    <p>ADILETTE 22 SLIDES</p>
+                    <p>₹5 999.00</p>
+                </div>
+                <div class="card" data-name="p27">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c3bbb2b7dc334cf5a679ab0600e28f8b_9366/adilette-aqua-slides.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p28">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d07195f7b97c454e8dc9aecb0106f461_9366/adilette-comfort-slides.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p29">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c7bb530083f24bde969eaaf0010fc020_9366/adilette-lite-slides.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p30">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/09b57d23fc9e4638a45cf508c55048a9_9366/urbanscape-m.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                </div>
+                <div class="card" data-name="p31">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/a86b378fb856485d9458ab73014397fd_9366/adilette-clogs.jpg" alt="">
+                    <p>Adilette Clogs</p>
+                    <p>₹2 999.00</p>
+                </div>
+                <div class="card" data-name="p32">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/09b57d23fc9e4638a45cf508c55048a9_9366/urbanscape-m.jpg" alt="">
+                    <p>URBANSCAPE M</p>
+                    <p>₹1 999.00</p>
+                </div>
+                <div class="card" data-name="p33">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/77c6aaf014d842abba8814057b7a7f27_9366/snozo-beach-m.jpg" alt="">
+                    <p>Snozo Beach M</p>
+                    <p>₹1 999.00</p>
+                </div>
+            </div>
+        </div>
+        <div id="bags">
+            <h1>BAGS</h1>
+            <div class="container">
+                <div class="card" data-name="p34">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/16441fa9a06847979025af3200995585_9366/essentials-training-duffel-bag-extra-small.jpg" alt="">
+                    <p>Essentials Training Duffel Bag Extra Small</p>
+                    <p>₹2 499.00</p>
+                </div>
+                <div class="card" data-name="p35">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b89bd5681b14469a97b4afbb00b133c9_9366/gym-high-intensity-backpack.jpg" alt="">
+                    <p>Gym High-Intensity Backpack</p>
+                    <p>₹5 999.00</p>
+                </div>
+                <div class="card" data-name="p36">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/84eb47e7703a4f40b415af3a00c6485c_9366/essentials-training-shoulder-bag.jpg" alt="">
+                    <p>Essentials Training Shoulder Bag</p>
+                    <p>₹1 999.00</p>
+                </div>
+                <div class="card" data-name="p37">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/8d0f1a49b9894584a7c9afd000b03ad7_9366/adidas-adventure-backpack.jpg" alt="">
+                    <p>adidas Adventure Backpack</p>
+                    <p>₹7 999.00</p>
+                </div>
+                <div class="card" data-name="p38">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/3680ae8ac00345afa615afbb00e4d61a_9366/power-backpack.jpg" alt="">
+                    <p>Power Backpack</p>
+                    <p>₹3 599.00</p>
+                </div>
+                <div class="card" data-name="p39">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/cab3089fbcbb4c1c9838ada100da7e97_9366/adidas-by-stella-mccartney-backpack.jpg" alt="">
+                    <p>adidas by Stella McCartney Backpack</p>
+                    <p>₹14 999.00</p>
+                </div>
+                <div class="card" data-name="p40">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/57213783fef94c748c99af3a00c00d0b_9366/classic-foundation-backpack.jpg" alt="">
+                    <pI>Power Backpack</p>
+                    <p>₹5 999.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-preview">
+            <div class="preview" data-target="p1">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4896bd57f0894845b5c0ae8300eec549_9366/Grand_Court_Cloudfoam_Comfort_Shoes_White_GW9195_01_standard.jpg" alt="">
+                    <p>Grand Court Cloudfoam Comfort Shoes</p>
+                    <p>₹4 799.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p2">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/da3096053475429a9943af2e00931c26_9366/Breaknet_2.0_Shoes_White_HP9424_01_standard.jpg" alt="">
+                    <p>Breaknet 2.0 Shoes</p>
+                    <p>₹5 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p3">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/5676f3c37e21445985825d0cfeee7c93_9366/STREET_ICON_SHOES_White_IQ9857_01_standard.jpg" alt="">
+                    <p>STREET ICON SHOES</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p4">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c4525189215146db81368cf216bcf534_9366/STREET_ICON_SHOES_Turquoise_IQ9856_01_standard.jpg" alt="">
+                    <p>STREET ICON SHOES</p>
+                    <p>₹3 799.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p5">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/68ae7ea7849b43eca70aac1e00f5146d_9366/Stan_Smith_Shoes_White_FX5502_01_standard.jpg">
+                    <p>Stan Smith Shoes</p>
+                    <p>₹8 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p6">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/26280fc629514fdfa3867918030e377e_9366/CourtBeat_Court_Lifestyle_Shoes_Black_ID9660_01_standard.jpg" alt="">
+                    <p>CourtBeat Court Lifestyle Shoes</p>
+                    <p>₹6 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p7">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/09c5ea6df1bd4be6baaaac5e003e7047_9366/Forum_Low_Shoes_White_FY7756_01_standard.jpg" alt="">
+                    <p>Forum Low Shoes</p>
+                    <p>₹9 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p8">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7c3bd0f9e2e5463780d367c6c0be6560_9366/stan-smith-crepe-shoes.jpg" alt="">
+                    <p>Men originals Brown Stan Smith Crepe Shoes</p>
+                    <p>₹13 799.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p9">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/8a62aacd63ad48f6a1433f6fb319cc56_9366/forum-bold-shoes.jpg" alt="">
+                <p>Women Basketball White Forum Bold Shoes</p>
+                <p>₹10 999.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p10">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f4484e30da084d8a868cafd2016193a4_9366/orchard-x-new-england-revolution-samba-adv-shoes.jpg" alt="">
+                <p>Men originals Blue Orchard x New England Revolution Samba ADV Shoes</p>
+                <p>₹10 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p11">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/454739b665514cc08c2438842fd9c373_9366/nmd_g1-shoes.jpg" alt="">
+                <p>Men originals Brown NMD_G1 Shoes</p>
+                <p>₹15 999.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p12">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fe6e39055d4c440db883f30055a536a7_9366/nmd_s1-shoes.jpg" alt="">
+                    <p>Men originals Black NMD_S1 Shoes</p>
+                    <p>₹19 799.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p13">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/854d6d1edbf94db1aa91d7ee5fee9216_9366/busenitz-vulc-2.0-shoes.jpg" alt="">
+                    <p>Men originals Black Busenitz Vulc 2.0 Shoes</p>
+                    <p>₹4 799.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p14">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0b106be0fa784731b291a494794744fe_9366/adicolor-classics-sst-track-pants.jpg" alt="">
+                <p>Adicolor Classics SST Track Pants</p>
+                <p>₹6 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p15">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/59ec599e62eb4bf1abb6afc30097eca0_9366/adicolor-classics-sst-track-pants.jpg" alt="">
+                <p>ADICOLOR CLASSICS SST TRACK PANTS</p>
+                <p>₹6 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p16">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/883ba696de464774ac6daef5010d03f7_9366/adicolor-classics-3-stripes-cargo-pants.jpg" alt="">
+                <p>Adicolor Classics 3-Stripes Cargo Pants</p>
+                <p>₹8 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p17">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/70b17658f1be473299ecafd000d0f03e_9366/adicolor-classics-3-stripes-cargo-pants.jpg" alt="">
+                <p>Adicolor Classics 3-Stripes Cargo Pants</p>
+                <p>₹8 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p18">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/cd17438d3a814bfd91feae8001296259_9366/essentials-fleece-regular-tapered-pants.jpg" alt="">
+                <p>Essentials Fleece Regular Tapered Pants</p>
+                <p>₹3 999.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p19">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/3339a75b5b604225b1e7afc901311e31_9366/graphics-monogram-sst-track-pants.jpg" alt="">
+                <p>Graphics Monogram SST Track Pants</p>
+                <p>₹7 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p20">
+                <i class="fas fa-times"></i><img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/92542c774ba547b9a74a809c054f0968_9366/z.n.e.-premium-pants.jpg" alt="">
+                <p>Graphics Monogram SST Track Pants</p>
+                <p>₹8 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p21">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/696c63304a0a4fa8abbcaf5e00ece4a1_9366/adicolor-parley-track-pants.jpg" alt="">
+                <p>Adicolor Parley Track Pants</p>
+                <p>₹4 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p22">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/d03570d3c69248dba303af2000ba56d9_9366/future-icons-3-stripes-pants.jpg" alt="">
+                <p>FUTURE ICONS 3-STRIPES PANTS</p>
+                <p>₹6 799.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p23">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/16d49add1437482d8d62af25011ffbbb_9366/trefoil-essentials-pants.jpg" alt="">
+                <p>Trefoil Essentials Pants</p>
+                <p>₹5 999.00</p>
+                <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p24">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/07f04e4aa56a4c3792f7a59f009eab3d_9366/adilette-slides.jpg" alt="">
+                    <p>ADILETTE SLIDES</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p25">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/28bb078a551544a191dea59900e3f310_9366/adilette-slides.jpg" alt="">
+                    <p>ADILETTE SLIDES</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p26">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/cfac3ca3f2984ceb8b9ed815e1f993cd_9366/adilette-22-slides.jpg" alt="">
+                    <p>ADILETTE 22 SLIDES</p>
+                    <p>₹5 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p27">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c3bbb2b7dc334cf5a679ab0600e28f8b_9366/adilette-aqua-slides.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p28">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d07195f7b97c454e8dc9aecb0106f461_9366/adilette-comfort-slides.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p29">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c7bb530083f24bde969eaaf0010fc020_9366/adilette-lite-slides.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p30">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/09b57d23fc9e4638a45cf508c55048a9_9366/urbanscape-m.jpg" alt="">
+                    <p>Adilette Comfort Slides</p>
+                    <p>₹3 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p31">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/a86b378fb856485d9458ab73014397fd_9366/adilette-clogs.jpg" alt="">
+                    <p>Adilette Clogs</p>
+                    <p>₹2 999.00</p>
+            </div>
+            <div class="preview" data-target="p32">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/09b57d23fc9e4638a45cf508c55048a9_9366/urbanscape-m.jpg" alt="">
+                    <p>URBANSCAPE M</p>
+                    <p>₹1 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p33">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/77c6aaf014d842abba8814057b7a7f27_9366/snozo-beach-m.jpg" alt="">
+                    <p>Snozo Beach M</p>
+                    <p>₹1 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p34">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/16441fa9a06847979025af3200995585_9366/essentials-training-duffel-bag-extra-small.jpg" alt="">
+                    <p>Essentials Training Duffel Bag Extra Small</p>
+                    <p>₹2 499.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p35">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b89bd5681b14469a97b4afbb00b133c9_9366/gym-high-intensity-backpack.jpg" alt="">
+                    <p>Gym High-Intensity Backpack</p>
+                    <p>₹5 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p36">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/84eb47e7703a4f40b415af3a00c6485c_9366/essentials-training-shoulder-bag.jpg" alt="">
+                    <p>Essentials Training Shoulder Bag</p>
+                    <p>₹1 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p37">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/8d0f1a49b9894584a7c9afd000b03ad7_9366/adidas-adventure-backpack.jpg" alt="">
+                    <p>adidas Adventure Backpack</p>
+                    <p>₹7 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p38">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/3680ae8ac00345afa615afbb00e4d61a_9366/power-backpack.jpg" alt="">
+                    <p>Power Backpack</p>
+                    <p>₹3 599.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p39">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/cab3089fbcbb4c1c9838ada100da7e97_9366/adidas-by-stella-mccartney-backpack.jpg" alt="">
+                    <p>adidas by Stella McCartney Backpack</p>
+                    <p>₹14 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+            <div class="preview" data-target="p40">
+                <i class="fas fa-times"></i>
+                <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/57213783fef94c748c99af3a00c00d0b_9366/classic-foundation-backpack.jpg" alt="">
+                    <pI>Power Backpack</p>
+                    <p>₹5 999.00</p>
+                    <button class="butn">ORDER NOW</button>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum maiores, neque maxime sint facilis rem explicabo aliquam quis fuga officia officiis rerum non voluptates ex tempora repellat blanditiis ut corporis assumenda quos nemo?</p>
+            <button type="submit" onclick="closepopup()">ok</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>       -->
+<script src="adidas.js"></script>
+</body>
+</html>
