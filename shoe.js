@@ -62,3 +62,14 @@ function openpopup(){
 function closepopup(){
   popup.classList.remove("open-popup");
 }
+let thnks = document.getElementById("thnks");
+function openthnks(){
+  thnks.classList.add("open-thnks");
+}
+document.querySelector(".okk").onclick=()=>{
+  openthnks();
+}
+document.querySelector(".t").onclick=()=>{
+  thnks.classList.remove("open-thnks");
+  popup.classList.remove("open-popup");
+}
