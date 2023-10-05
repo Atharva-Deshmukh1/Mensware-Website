@@ -39,6 +39,7 @@ body , html{
     justify-content: space-between;
     padding: 10px 20px;
 }
+
 .logo{
     color: rgb(240, 238, 233);
     background: #000000;
@@ -414,7 +415,7 @@ footer .wave#wave4{
 .popup{
     width: 300px;
     height:400px;
-    background: #fbadad;
+    background: #606060;
     position: fixed;
     border-radius: 9px;
     top: 0;

@@ -48,23 +48,22 @@ previewbox.forEach(close =>{
   };
 })
 
+let popup = document.getElementById("popup");
+let thnks = document.getElementById("thnks");
+
 previewbox.forEach(close =>{
   close.querySelector('.butn').onclick = () =>{
     close.classList.remove('active');
-    openpopup();
     previewcontainer.style.display = 'none';
-  };
-})
-let popup = document.getElementById("popup");
+    popup.classList.add("open-popup");
+    document.querySelector(".okk").onclick=()=>{
 
-function openpopup(){
-  popup.classList.add("open-popup");
-}
-function closepopup(){
-  popup.classList.remove("open-popup");
-}
-previewbox.forEach(close =>{
-  close.querySelector('.butn').onclick = () =>{
-    popup.classList.add(".open-popup");
+      thnks.classList.add("open-thnks");
+    }
   };
+  document.querySelector(".t").onclick=()=>{
+    thnks.classList.remove("open-thnks");
+    popup.classList.remove("open-popup");
+  }
 })
+
