@@ -161,7 +161,7 @@ h1{
 .popup{
     width: 300px;
     height:400px;
-    background: #fbadad;
+    background: #606060;
     position: fixed;
     border-radius: 9px;
     top: 0;
@@ -194,8 +194,6 @@ h1{
     height:  2rem;
     background: #6fd649;
     text-align: center;
-    /* display: flex;
-    align-items: center; */
     margin: 10px;
     margin-left: 20%;
     font-weight: 700;
@@ -206,11 +204,9 @@ h1{
 .t{
     width: 8rem;
     height:  2rem;
-    background: #000000;
+    background: #6fd649;
     text-align: center;
-    
-    margin: 10px;
-    
+    margin: 30px;
     color: #fff;
     font-weight: 700;
     border: none;
@@ -224,6 +220,16 @@ h1{
     background: #6fd649;
     text-align: center;
     margin: 10px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    box-shadow:black 2px 2px 2px;
+}
+.not-okk{
+    width: 8rem;
+    height:  2rem;
+    text-align: center;
+    margin-left: 20%;
     font-weight: 700;
     border: none;
     border-radius: 5px;
@@ -243,7 +249,7 @@ button:hover{
 .thnks{
     width: 300px;
     height:400px;
-    background: #56b74f;
+    background: #1f1f1f;
     position: fixed;
     border-radius: 9px;
     top: 0;
@@ -252,7 +258,9 @@ button:hover{
     visibility: hidden;
     text-align: center;
     padding: 0 30px 30px;
-    color: #333;
+    color: #eee2e2;
+    line-height: 20px;
+    font-size: 16px;
     z-index: 999;
     transition: transform 0.4s, top 0.4s;
 }
@@ -260,4 +268,10 @@ button:hover{
     visibility: visible;
     top: 50%;
     transform: translate(-50%,-50%) scale(1);
+}
+.thnks>img{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 50px;
+    width: 50px;
 }

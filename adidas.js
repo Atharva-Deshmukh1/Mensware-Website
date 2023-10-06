@@ -65,5 +65,9 @@ previewbox.forEach(close =>{
     thnks.classList.remove("open-thnks");
     popup.classList.remove("open-popup");
   }
+  document.querySelector(".not-okk").onclick=()=>{
+
+    popup.classList.remove("open-popup");
+  }
 })
 
